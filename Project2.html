@@ -6,56 +6,86 @@
         Mary Openshaw Project Page 2
     </title>
     <ul id="navigation">
-            <li> <a href="project.html"> Basic</a> </li>
-            <li> <a href="project2.html"> Intermediate</a> </li>
-            <li> <a href="project3.html"> Advanced </a> </li>  
-        </ul>
+        <li> <a href="project.html"> Basic</a> </li>
+        <li> <a href="project2.html"> Intermediate</a> </li>
+        <li> <a href="project3.html"> Advanced </a> </li>
+    </ul>
 </head>
+
 <body>
-        <div>
-            <h1>
-                Project Page Intermediate 
-            </h1>
-        </div>
-        <div>
-            <h2>
-                JavaScript
-            </h2>
-        </div>
-        <div>
-            <p>
-                The Projects featured on this page were done at work during a 12 week training period and will be Displayed here from now
-                on. This First Section will contian JavaScript features that can be viewed in the console. to view the console
-                right click on the webpage then go down to inspect then you should see a tab which says console. this is where
-                you will see the output of the JavaScript examples on this page.
-            </p>
-        </div> 
-        <div>
-            <p>
-                This Script will print into the console, numbers from 1 to 100 and replaces every number that is devisible by 3 with the 
-                word Fizz and every number divisible by 5 with the word Buzz and those devisible by both with have the word Fizz Buzz any
-                other number will just printed out as it is. 
-                <script>
-                        for (i = 1; i > 0 && i < 100; i++) {
-                            if (i % 3 == 0) {
-                                console.log("Fizz");
-                                }
-                             else if (i % 5 == 0) 
-                                {
-                                console.log("Buzz");
-                                }
-                            else if (i % 3 == 0 && i % 5 == 0) 
-                                {
-                                 console.log("Fizz Buzz");
-                                }
-                                else {
-                                    console.log(i)
-                                }
-                           
-                           } 
+    <div>
+        <h1>
+            Project Page Intermediate
+        </h1>
+    </div>
+    <div>
+        <h2>
+            JavaScript
+        </h2>
+    </div>
+    <div>
+        <p>
+            The Projects featured on this page were done at work during a 12 week training period and will be Displayed here from now
+            on. This First Section will contian JavaScript features that can be viewed in the console. to view the console
+            right click on the webpage then go down to inspect then you should see a tab which says console. this is where
+            you will see the output of the JavaScript examples on this page.
+        </p>
+    </div>
+    <div>
+        <p>
+            This Script will print into the console, numbers from 1 to 100 and replaces every number that is devisible by 3 with the
+            word Fizz and every number divisible by 5 with the word Buzz and those devisible by both with have the word Fizz
+            Buzz any other number will just printed out as it is.
+            <script>
+                for (i = 1; i > 0 && i < 100; i++) {
+                    if (i % 3 == 0) {
+                        console.log("Fizz");
+                    }
+                    else if (i % 5 == 0) {
+                        console.log("Buzz");
+                    }
+                    else if (i % 3 == 0 && i % 5 == 0) {
+                        console.log("Fizz Buzz");
+                    }
+                    else {
+                        console.log(i)
+                    }
+                }
                         //
-                </script>
-            </p>    
+            </script>
+        </p>
+    </div>
+    <div>
+        <p> this feils will allow a user to enter a large number which will then be devied by 3 until the number reaches 1.
+            <div>
+                enter a Number:
+                <input type="text" name="numberToBeDevided">
+            </div>
+            <script>
+                function read() {
+                    var a = document.getElementsByName("numberToBeDevided")[0].value;
+                    console.log(a);
+                    for (a !== 1; a--;) {
+                        if (a % 3 == 0) {
+                            // true a/3;
+                            //false a+1/3;
+
+                            a / 3;
+                            console.log(a);
+                        }
+                        else if (a != a % 3 == 0) {
+                            a + 1;
+                            a / 3;
+                            console.log(a);
+                        }
+                    }
+                }
+            </script>
+        </p>
+        <div>
+            <button onclick="read()">Submit</button>
         </div>
+    </div>
 </body>
-</html> 
+
+</html>
