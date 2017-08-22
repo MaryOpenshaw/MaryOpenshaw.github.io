@@ -1,23 +1,29 @@
 <!DOCTTYPE html>
 <html>
-<!--css-->
-<link rel="stylesheet" href="tempalte.css">
 
 <head>
+
     <title>
         Mary Openshaw Project Page
     </title>
+    <div>
+        <ul id="navigation">
+            <li> <a href="project.html"> Basic</a> </li>
+            <li> <a href="project2.html"> InterMediate</a> </li>
+            <li> <a href="project3.html"> Advanced </a> </li>
+        </ul>
+    </div>
 </head>
 
 <body>
     <div>
         <h1>
-            Project Page
+            Project Page Basic
         </h1>
     </div>
     <div>
         <h2>
-            JavaScrip and HTML projects
+            JavaScript
         </h2>
     </div>
     <div>
@@ -30,85 +36,116 @@
     </div>
     <div>
         <p>
-            the below number is set to apear on the console as well as on the
-            HTML page and as a popup number
+            the below number is set to apear on the console as well as on the HTML page and as a popup.
+            <div>
+                <script>
+                    var x = 5;
+                    document.write(x);
+                </script>
+            </div>
             <script>
-                var x = 5;
-                document.write(x);
-            </script>
-            <script>
-                window.alert(x);
+                    window.alert(x);
             </script>
             <script>
                 console.log(x);
             </script>
-            <script>
-                function squareNumber(x) {
-                    return x * x;
-                }
-                console.log(squareNumber(9));
-            </script>
+        </p>
+    </div>
+    <div>
+        <p>
+            This JavaScript section takes 3 numbers and adds them together then displays them to the console.
             <script>
                 function sum(a, b, c) {
+                    console.log(sum(1, 2, 3));
                     return a + b + c;
                 }
-                console.log(sum(1, 2, 3));
-            </script>
-            <script>
-                        function person(name, age, occupation) {
-                            this.name = name;
-                            this.age = age;
-                            this.occupation = occupation;
-                            this.setAge = function (y) {
-                                return this.age = y;
-                            }
-                        }
-                        var p1 = new person("Bob", 23, "Fog hunter");
-                        console.log(p1.name + " " + p1.age + " " + p1.occupation);
-
-                        function increaseAge(person) {
-                            a = person.setAge(person.age + 1);
-                            return a;
-                        }
-                        console.log(increaseAge(p1));
+                //console.log(sum(1, 2, 3));
             </script>
         </p>
     </div>
     <div>
-        <div>
-            enter name:
-            <input type="text" name="name">
-        </div>
-
-        <div>
-            enter age:
-            <input type="text" name="age">
-        </div>
-
-        <div>
-            enter occupation
-            <input type="text" name="occupation">
-        </div>
-
-        <div>
-            <button onclick="insert()" type="button"> submit </button>
-
-            </button>
-
-        </div>
-        <div>
+        <p>
+            This Function should take an number and times it by its self and log the result.
             <script>
-                       function insert() {
-                           //var p = new person("name",0,"occupation"); 
-                           //document.getElementByName("name","age","occupation");		
-                           var d = document.getElementsByName("name")[0].value;
-                           var e = document.getElementsByName("age")[0].value;
-                           var f = document.getElementsByName("occupation")[0].value;
-                           //var arrayPerson = [var d, var e, var f];
-                           //var arrayperson = [d , e, f];
-                           console.log(d + " " + e + " " + f);
-                           return d + e + f;
-                       }
+                function squareNumber(x) {
+                    console.log(squareNumber(9));
+                    return x * x;
+                }
+               // console.log(squareNumber(9));
+            </script>
+        </p>
+    </div>
+    <p>
+        This section of Script does several things the first is:
+        <oi>
+            <li> creates a person object</li>
+            <li> gives the person some features such as name, age and occupation</li>
+            <li> the second part enters information for that person and prints that information to the console </li>
+            <li> the final section increases the persons age </li>
+        </oi>
+        <script>
+                function person(name, age, occupation) {
+                    this.name = name;
+                    this.age = age;
+                    this.occupation = occupation;
+                    this.setAge = function (y) {
+                        return this.age = y;
+                    }
+                }
+                var p1 = new person("Bob", 23, "Fog hunter");
+                console.log(p1.name + " " + p1.age + " " + p1.occupation);
+
+                function increaseAge(person) {
+                    a = person.setAge(person.age + 1);
+                    console.log(increaseAge(p1));
+                    return a;
+                }
+                //
+        </script>
+    </p>
+    </div>
+    <div>
+        <p>
+            The below form allows you to enter some information to build a person object. this object will then be stored.
+
+            <div>
+
+                enter name:
+                <input type="text" name="name">
+            </div>
+
+            <div>
+                enter age:
+                <input type="text" name="age">
+            </div>
+
+            <div>
+                enter occupation
+                <input type="text" name="occupation">
+            </div>
+
+            <div>
+                <button onclick="insert()" type="button"> submit </button>
+
+                </button>
+            </div>
+        </p>
+    </div>
+    <div>
+        <p>
+            This Funtion outputs the person object that was stored in the form, to the console.
+            <script>
+                function insert() {
+                    //var p = new person("name",0,"occupation"); 
+                    //document.getElementByName("name","age","occupation");		
+                    var d = document.getElementsByName("name")[0].value;
+                    var e = document.getElementsByName("age")[0].value;
+                    var f = document.getElementsByName("occupation")[0].value;
+                    //var arrayPerson = [var d, var e, var f];
+                    //var arrayperson = [d , e, f];
+                    console.log(d + " " + e + " " + f);
+                    return d + e + f;
+                }
             </script>
             <script>
                 function onClick() {
@@ -116,15 +153,31 @@
                 }
                 document.write("hello world");
             </script>
-        </div>
-        <div>
-            <button onclick="onClick()"> alert </button>
-        </div>
-        <div>
-            <button onclick="increaseAge(p1)">increase age</button>
-        </div>
-        <div>
-
+        </p>
+    </div>
+    <div>
+        <p>
+            this button will, when clicked cause a popup that says hello world. the second button will increase the age of a person by
+            a set ammount the current set amount is +1
+            <div>
+                <button onclick="onClick()"> alert </button>
+            </div>
+            <div>
+                <button onclick="increaseAge(p1)">increase age</button>
+            </div>
+        </p>
+    </div>
+    <div>
+        <p>
+            This Script will put several things to the console.
+            <ul>
+                <li> a string to the console</li>
+                <li> the same string in capitals to the next line</li>
+                <li> add a straing to a int (number) and log them to the console</li>
+                <li>creating an array, with 3 items</li>
+                <li> add a 4th item to the array list </li>
+                <li> removing an element </li>
+            </ul>
             <script>
                 var g = "he said 'my name is Elliott' ";
                 console.log(g);
@@ -144,15 +197,47 @@
                 arrayOne.splice(3, 1);
                 console.log(arrayOne);
             </script>
-        </div>
-        <div>
+        </p>
+    </div>
+    <div>
+        <p>
+            This Function will print to the console if a specified person's age is between 20 and 40
             <script>
-                    //var j = p1.age; 
-                    if p1.age >= (20 || <=40) {
-                        console.log(p1);
-                    }
+                //
+                if (p1.age >= 20 || p1.age <= 40) {
+                    console.log(p1);
+                }
+                //
             </script>
-        </div>
+        </p>
+    </div>
+
+    <div>
+        <p>
+            this Script will move through a number and increase it untill it reaches 10
+            <script>
+                for (k = 1; k > 0 && k < 10; k++) {
+                    console.log(k);
+                }
+               // 
+            </script>
+        </p>
+    </div>
+<div>
+    <script>
+        console.log ("        ")
+        </script>
+</div>
+    <div>
+        <script>
+                for (k = 1; k > 0 && k < 10; k++) {
+                    if(k % 2 == 0) {
+                        console.log(k);
+                    } 
+                }
+                //
+        </script>
+    </div>
 </body>
 
 </html>
