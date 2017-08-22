@@ -7,14 +7,14 @@
     </title>
     <ul id="navigation">
             <li> <a href="project.html"> Basic</a> </li>
-            <li> <a href="project2.html"> InterMediate</a> </li>
+            <li> <a href="project2.html"> Intermediate</a> </li>
             <li> <a href="project3.html"> Advanced </a> </li>  
         </ul>
 </head>
 <body>
         <div>
             <h1>
-                Project Page Begiiner 
+                Project Page Intermediate 
             </h1>
         </div>
         <div>
@@ -29,6 +29,33 @@
                 right click on the webpage then go down to inspect then you should see a tab which says console. this is where
                 you will see the output of the JavaScript examples on this page.
             </p>
+        </div> 
+        <div>
+            <p>
+                This Script will print into the console, numbers from 1 to 100 and replaces every number that is devisible by 3 with the 
+                word Fizz and every number divisible by 5 with the word Buzz and those devisible by both with have the word Fizz Buzz any
+                other number will just printed out as it is. 
+                <script>
+                        for (i = 1; i > 0 && i < 100; i++) {
+                            if (i % 3 == 0) {
+                                console.log("Fizz");
+                                }
+                             else if (i % 5 == 0) 
+                                {
+                                console.log("Buzz");
+                                }
+                            else if (i % 3 == 0 && i % 5 == 0) 
+                                {
+                                 console.log("Fizz Buzz");
+                                }
+                                else {
+                                    console.log(i)
+                                }
+                           
+                           } 
+                        //
+                </script>
+            </p>    
         </div>
 </body>
 </html> 
