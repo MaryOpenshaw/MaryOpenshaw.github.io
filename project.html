@@ -1,0 +1,158 @@
+<!DOCTTYPE html>
+<html>
+<!--css-->
+<link rel="stylesheet" href="tempalte.css">
+
+<head>
+    <title>
+        Mary Openshaw Project Page
+    </title>
+</head>
+
+<body>
+    <div>
+        <h1>
+            Project Page
+        </h1>
+    </div>
+    <div>
+        <h2>
+            JavaScrip and HTML projects
+        </h2>
+    </div>
+    <div>
+        <p>
+            The Projects featured on this page were done at work during a 12 week training period and will be Displayed here from now
+            on. This First Section will contian JavaScript features that can be viewed in the console. to view the console
+            right click on the webpage then go down to inspect then you should see a tab which says console. this is where
+            you will see the output of the JavaScript examples on this page.
+        </p>
+    </div>
+    <div>
+        <p>
+            the below number is set to apear on the console as well as on the
+            HTML page and as a popup number
+            <script>
+                var x = 5;
+                document.write(x);
+            </script>
+            <script>
+                window.alert(x);
+            </script>
+            <script>
+                console.log(x);
+            </script>
+            <script>
+                function squareNumber(x) {
+                    return x * x;
+                }
+                console.log(squareNumber(9));
+            </script>
+            <script>
+                function sum(a, b, c) {
+                    return a + b + c;
+                }
+                console.log(sum(1, 2, 3));
+            </script>
+            <script>
+                        function person(name, age, occupation) {
+                            this.name = name;
+                            this.age = age;
+                            this.occupation = occupation;
+                            this.setAge = function (y) {
+                                return this.age = y;
+                            }
+                        }
+                        var p1 = new person("Bob", 23, "Fog hunter");
+                        console.log(p1.name + " " + p1.age + " " + p1.occupation);
+
+                        function increaseAge(person) {
+                            a = person.setAge(person.age + 1);
+                            return a;
+                        }
+                        console.log(increaseAge(p1));
+            </script>
+        </p>
+    </div>
+    <div>
+        <div>
+            enter name:
+            <input type="text" name="name">
+        </div>
+
+        <div>
+            enter age:
+            <input type="text" name="age">
+        </div>
+
+        <div>
+            enter occupation
+            <input type="text" name="occupation">
+        </div>
+
+        <div>
+            <button onclick="insert()" type="button"> submit </button>
+
+            </button>
+
+        </div>
+        <div>
+            <script>
+                       function insert() {
+                           //var p = new person("name",0,"occupation"); 
+                           //document.getElementByName("name","age","occupation");		
+                           var d = document.getElementsByName("name")[0].value;
+                           var e = document.getElementsByName("age")[0].value;
+                           var f = document.getElementsByName("occupation")[0].value;
+                           //var arrayPerson = [var d, var e, var f];
+                           //var arrayperson = [d , e, f];
+                           console.log(d + " " + e + " " + f);
+                           return d + e + f;
+                       }
+            </script>
+            <script>
+                function onClick() {
+                    alert("hello world!");
+                }
+                document.write("hello world");
+            </script>
+        </div>
+        <div>
+            <button onclick="onClick()"> alert </button>
+        </div>
+        <div>
+            <button onclick="increaseAge(p1)">increase age</button>
+        </div>
+        <div>
+
+            <script>
+                var g = "he said 'my name is Elliott' ";
+                console.log(g);
+
+                var h = g.replace("he said 'my name is Elliott'", "HE SAID 'MY NAME IS ELLIOTT'");
+                console.log(h);
+
+                var i = "hello";
+                console.log(i + " " + 1);
+
+                var arrayOne = ["one", "two", "three"];
+                console.log(arrayOne);
+
+                arrayOne[3] = "Four";
+                console.log(arrayOne);
+
+                arrayOne.splice(3, 1);
+                console.log(arrayOne);
+            </script>
+        </div>
+        <div>
+            <script>
+                    //var j = p1.age; 
+                    if p1.age >= (20 || <=40) {
+                        console.log(p1);
+                    }
+            </script>
+        </div>
+</body>
+
+</html>
