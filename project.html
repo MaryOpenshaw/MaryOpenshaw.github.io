@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+    <link rel="stylesheet" href="template.css">
     <title>
         Mary Openshaw Project Page
     </title>
@@ -139,9 +139,9 @@
                 function insert() {
                     //var p = new person("name",0,"occupation"); 
                     //document.getElementByName("name","age","occupation");		
-                    var d = document.getElementsByName("name")[0].value;
-                    var e = document.getElementsByName("age")[0].value;
-                    var f = document.getElementsByName("occupation")[0].value;
+                    let d = document.getElementsByName("name")[0].value;
+                    let e = document.getElementsByName("age")[0].value;
+                    let f = document.getElementsByName("occupation")[0].value;
                     //var arrayPerson = [var d, var e, var f];
                     //var arrayperson = [d , e, f];
                     console.log(d + " " + e + " " + f);
@@ -180,16 +180,16 @@
                 <li> removing an element </li>
             </ul>
             <script>
-                var g = "he said 'my name is Elliott' ";
+                let g = "he said 'my name is Elliott' ";
                 console.log(g);
 
-                var h = g.replace("he said 'my name is Elliott'", "HE SAID 'MY NAME IS ELLIOTT'");
+                let h = g.replace("he said 'my name is Elliott'", "HE SAID 'MY NAME IS ELLIOTT'");
                 console.log(h);
 
-                var i = "hello";
+                let i = "hello";
                 console.log(i + " " + 1);
 
-                var arrayOne = ["one", "two", "three"];
+                let arrayOne = ["one", "two", "three"];
                 console.log(arrayOne);
 
                 arrayOne[3] = "Four";
