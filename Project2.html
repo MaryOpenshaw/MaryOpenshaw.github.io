@@ -11,7 +11,7 @@
         <ul id="navigation">
             <li> <a href="index.html"> Home</a> </li>
             <li> <a href="project.html"> Basic Tasks</a> </li>
-            <li> <a href="project2.html"> Intermediate tasks</a> </li>
+            <li> <a href="Project2.html"> Intermediate tasks</a> </li>
             <li> <a href="project3.html"> Advanced task</a> </li>
         </ul>
     </div>
@@ -60,6 +60,29 @@
             </script>
         </p>
     </div>
+
+    <div>
+        <p>
+            this is the tripple string 4 task, it will search through a given string to determin if a character apears 3 times in that
+            string.
+            <script>
+                let a = "xxxabyyycd";
+                let count1 = 0;
+                let count2 = 0;
+                for (let i = 0; a.length > i; i++) {
+                    if (a.charAt(i) === 'x') {
+                        ++count1;
+                    }
+                    else if (a.charAt(i) === 'y')
+                        ++count2;
+                }
+                console.log(a);
+                console.log(count1 + " This is the count for the number of 'X' contained in the string")
+                console.log(count2 + "this is the numebr of y's in the string");
+            </script>
+        </p>
+    </div>
+
     <div>
         <p> this feils will allow a user to enter a large number which will then be devied by 3 until the number reaches 1.
             <div>
@@ -94,24 +117,30 @@
                 }
             </script>
         </p>
-        <div>
-            <button onclick="read()">Submit</button>
-        </div>
     </div>
-
+    <div>
+        <button onclick="read()">Submit</button>
+    </div>
+    <!-- -->
     <div>
         <p>
-            this is the tripple string 4 task, it will search through a given string to determin if a character apears 3 times in that
-            string.
-            <script>
-                let countTripple = () => {
-                    let a = "abcXXabc";
-                    let b = "xxxabyyycd";
-                    console.log(a.length);
-                }
-            </script>
+            this sections will allow a user to enter there own text into the text box which will then be inserted into this webpage as
+            a new paragraph.
+            <div>
+                <button type="button"> Make </button>
+            </div>
+            <div>
+                <input type="text" name "enter"> enter new paragraph content
+            </div>
+            <div>
+                <button type="button"> insert </button>
+            </div>
+            <div>
+                <button type="button"> remove </button>
+            </div>
         </p>
     </div>
+
 </body>
 
 </html>
