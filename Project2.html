@@ -2,14 +2,18 @@
 <html>
 
 <head>
+
     <title>
-        Mary Openshaw Project Page 2
+        Mary Openshaw Project Page
     </title>
-    <ul id="navigation">
-        <li> <a href="project.html"> Basic</a> </li>
-        <li> <a href="project2.html"> Intermediate</a> </li>
-        <li> <a href="project3.html"> Advanced </a> </li>
-    </ul>
+    <div>
+        <ul id="navigation">
+            <li> <a href="index.html"> Home</a> </li>
+            <li> <a href="project.html"> Basic</a> </li>
+            <li> <a href="project2.html"> Intermediate</a> </li>
+            <li> <a href="project3.html"> Advanced </a> </li>
+        </ul>
+    </div>
 </head>
 
 <body>
@@ -48,7 +52,7 @@
                         console.log("Fizz Buzz");
                     }
                     else {
-                        console.log(i)
+                        console.log(i);
                     }
                 }
                         //
@@ -65,18 +69,18 @@
                 function read() {
                     var a = document.getElementsByName("numberToBeDevided")[0].value;
                     console.log(a);
-                    for (a !== 1; a--;) {
+                    //
+                    for (a !== 1; /*a--*/;) {
                         if (a % 3 == 0) {
-                            // true a/3;
-                            //false a+1/3;
-
-                            a / 3;
-                            console.log(a);
+                            //
+                            var b = a-- / 3;
+                            console.log(b);
                         }
+                        //
                         else if (a != a % 3 == 0) {
-                            a + 1;
-                            a / 3;
-                            console.log(a);
+                            var c = a - 1;
+                            var d = c / 3;
+                            console.log(d);
                         }
                     }
                 }
