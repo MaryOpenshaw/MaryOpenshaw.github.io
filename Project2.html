@@ -127,20 +127,106 @@
             this sections will allow a user to enter there own text into the text box which will then be inserted into this webpage as
             a new paragraph.
             <div>
-                <button type="button"> Make </button>
+                click make to make a new paragraph
             </div>
             <div>
-                <input type="text" name "enter"> enter new paragraph content
+                <button onclick=make() type="button"> make </button>
             </div>
             <div>
-                <button type="button"> insert </button>
+                enter new paragraph content
             </div>
             <div>
-                <button type="button"> remove </button>
+                <input type="text" name="enter">
+            </div>
+            <div>
+                click insert to put the textbox content into that new paragraph
+            </div>
+            <div>
+                <button onclick=input() type="button"> insert </button>
+            </div>
+            <div>
+                remove the paragrph
+            </div>
+            <div>
+                <button onclick=getRid() type="button"> remove </button>
+            </div>
+        </p>
+    </div>
+    <div>
+        <p>
+            <script>
+                function make() {
+                    //makes the element 
+                    let para = document.createElement("p");
+                    para.setAttribute("id", "p1");
+                    let node = document.createTextNode("the paragraph you made" + '\n');
+                    para.appendChild(node);
+                    let el = document.getElementById("div1");
+                    el.appendChild(para);
+
+                }
+                function input() {
+
+                    let a = document.getElementsByName("enter")[0].value;
+                    let node = document.createTextNode('\n' + a);
+                    let para = document.getElementById("p1");
+                    para.appendChild(node);
+                    let el = document.getElementById("div1");
+                    el.appendChild(para);
+                }
+
+                function getRid() {
+                    par = document.getElementById("p1");
+                    par.parentNode.removeChild(par);
+
+                }
+            </script>
+        </p>
+    </div>
+    <div id="div1">
+    </div>
+
+    <div>
+        <p>
+            Task json 1
+            <div>
+                <button onclick=openWebsite() type="button"> go to Jason </button>
+            </div>
+            <div>
+                <script>
+                    function openWebsite() {
+                        document.location.assign(" https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json");
+                        get = document.getSelection(pre)
+                        console.log(get)
+                    }
+                </script>
             </div>
         </p>
     </div>
 
+    <div>
+        <p>
+            Task json 2
+            <div>
+                enter search criteria
+            </div>
+            <div>
+                <input type="text" name="search">
+            </div>
+            <div>
+                <button onclick=t ype="button">
+                    Search!
+                </button>
+            </div>
+            <div>
+                <script>
+                    function searchJson() {
+                        document.location.assign(" https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json");
+                    }
+                </script>
+            </div>
+        </p>
+    </div>
 </body>
 
 </html>
