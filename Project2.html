@@ -223,11 +223,9 @@
                                 let myp4 = document.createElement('p');
                                 myp4.textContent = text['active'];
                                 el.appendChild(myp4);
-
-
-                                // console.log("test" + text['members'][0]);
+                                //
                                 let size = text['members'].length;
-                                //let m = JSON.parse['member'];
+                                //
                                 for (let i = 0; i < size; i++) {
                                     let myp5 = document.createElement('p');
                                     myp5.textContent = JSON.stringify(text['members'][i]);                                   //let el = document.getElementById("div2");
@@ -258,16 +256,29 @@
             <div>
                 <input type="text" name="search">
             </div>
+
             <div>
-                <button onclick=searchJson type="button">
+                <button onclick=searchJson() type="button">
                     Search!
                 </button>
             </div>
             <div>
                 <script>
-                    // function searchJson() {
-                    //     document.location.assign(" https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json");
-                    // }
+                    function searchJson() {
+                        let ur1l = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json';
+                        let xhttp1 = new XMLHttpRequest();
+                        xhttp1.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                let text1 = JSON.parse(this.responseText);
+                                console.log(text1);
+
+                                let enteredV = getElementsByName(search)[0].value;
+                                let searching = JSON.search(text1, "//enteredV");
+                                console.log(searching);
+                                // /html/body/pre  -expath JSON file
+                            }
+                        }
+                    }
                 </script>
             </div>
         </p>
