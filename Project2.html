@@ -224,17 +224,20 @@
                                 myp4.textContent = text['active'];
                                 el.appendChild(myp4);
 
-                                let myp5 = document.createElement('p');
-                                myp5.textContent = text['member'];
-                                el.appendChild(myp5);
-                                // let text2 = JSON.parse(this.responseText).length;
-                                // console.log(myp5.length);
 
-
+                                // console.log("test" + text['members'][0]);
+                                let size = text['members'].length;
+                                //let m = JSON.parse['member'];
+                                for (let i = 0; i < size; i++) {
+                                    let myp5 = document.createElement('p');
+                                    myp5.textContent = JSON.stringify(text['members'][i]);                                   //let el = document.getElementById("div2");
+                                    el.appendChild(myp5).toString;
+                                    // let text2 = JSON.parse(this.responseText).length;
+                                    console.log(myp5);
+                                }
                             }
-
-
-                        };
+                        }
+                        //
                         xhttp.open("GET", url, true);
                         xhttp.send();
 
