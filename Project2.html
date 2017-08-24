@@ -169,7 +169,7 @@
                 function input() {
 
                     let a = document.getElementsByName("enter")[0].value;
-                    let node = document.createTextNode('\n' + a);
+                    let node = document.createTextNode(':\n' + a);
                     let para = document.getElementById("p1");
                     para.appendChild(node);
                     let el = document.getElementById("div1");
@@ -196,13 +196,54 @@
             <div>
                 <script>
                     function openWebsite() {
-                        window.open("https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json");
-                        get = window.getSelection();
-                        console.log(get);
+                        let url = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json';
+                        let xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                let text = JSON.parse(this.responseText);
+                                console.log(text);
+
+                                let el = document.getElementById("div2");
+                                let myh1 = document.createElement('h1');
+                                myh1.textContent = text['squadName'];
+                                el.appendChild(myh1)
+
+                                let myp1 = document.createElement('p');
+                                myp1.textContent = text['homeTown'];
+                                el.appendChild(myp1);
+
+                                let myp2 = document.createElement('p');
+                                myp2.textContent = text['formed'];
+                                el.appendChild(myp2);
+
+                                let myp3 = document.createElement('p');
+                                myp3.textContent = text['secretBase'];
+                                el.appendChild(myp3);
+
+                                let myp4 = document.createElement('p');
+                                myp4.textContent = text['active'];
+                                el.appendChild(myp4);
+
+                                let myp5 = document.createElement('p');
+                                myp5.textContent = text['member'];
+                                el.appendChild(myp5);
+                                // let text2 = JSON.parse(this.responseText).length;
+                                // console.log(myp5.length);
+
+
+                            }
+
+
+                        };
+                        xhttp.open("GET", url, true);
+                        xhttp.send();
+
                     }
                 </script>
             </div>
         </p>
+    </div>
+    <div id="div2">
     </div>
 
     <div>
@@ -215,15 +256,15 @@
                 <input type="text" name="search">
             </div>
             <div>
-                <button onclick=t ype="button">
+                <button onclick=searchJson type="button">
                     Search!
                 </button>
             </div>
             <div>
                 <script>
-                    function searchJson() {
-                        document.location.assign(" https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json");
-                    }
+                    // function searchJson() {
+                    //     document.location.assign(" https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json");
+                    // }
                 </script>
             </div>
         </p>
